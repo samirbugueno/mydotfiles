@@ -1,0 +1,32 @@
+#! /bin/sh
+
+function hide() {
+	
+	if [[ "${RICEUSED}" == @(fuchsia|red|blue|white|green|yellow|cian|purple) ]]; then
+		polybar-msg cmd hide | bspc config top_padding 0
+	
+	else
+		echo "Error :("
+	fi
+}
+
+function unhide() {
+	
+	if [[ "${RICEUSED}" == @(fuchsia|red|blue|white|green|yellow|cian|purple) ]]; then
+		polybar-msg cmd show | bspc config top_padding 0
+
+	else 
+		echo "Error :("
+	fi
+}
+   case $1 in
+		 -h | --hide | hide)
+			hide
+			exit;;
+		 -u | --unhide | unhide)
+			unhide
+			exit;;
+			*)
+         echo "Error :("
+         exit;;
+   esac
