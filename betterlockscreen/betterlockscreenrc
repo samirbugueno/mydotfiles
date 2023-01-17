@@ -1,0 +1,34 @@
+# saMirky Config
+
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+solid_color=333333
+wallpaper_cmd="nitrogen --restore"
+quiet=false
+
+loginbox=000000
+loginshadow=000000
+locktext="Type password to unlock..."
+font="Hack Nerd Font"
+ringcolor=ff0080
+insidecolor=000000
+separatorcolor=00000000
+ringvercolor=ff0080
+insidevercolor=000000
+ringwrongcolor=ffffff
+insidewrongcolor=000000
+timecolor=ff0080
+time_format="%H:%M:%S"
+greetercolor=ff0080
+layoutcolor=ff0080
+keyhlcolor=000000
+bshlcolor=ff0080
+verifcolor=ff0080
+wrongcolor=ff0080
+modifcolor=ff0080
+bgcolor=000000
