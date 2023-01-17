@@ -1,0 +1,46 @@
+
+# saMirky Config
+
+window:
+  padding:
+    x: 8
+    y: 8
+
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+
+  size: 9
+
+colors:
+  primary:
+    background: '#000000'
+    foreground: '#ff0080'
+
+  normal:
+    black:   '#ff0080'
+    red:     '#ff0080'
+    green:   '#ff0080'
+    yellow:  '#ff0080'
+    blue:    '#ff0080'
+    magenta: '#ff0080'
+    cyan:    '#ff0080'
+    white:   '#ff0080'
+    
+cursor:
+  style:
+    shape: Beam
+    blinking: On
