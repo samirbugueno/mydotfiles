@@ -1,0 +1,80 @@
+
+# saMirky Config
+
+# Terminal
+super + Return
+	alacritty
+
+# Program Launcher
+super + @space
+	rofi -no-lazy-grab -show drun -theme $HOME/.config/bspwm/rices/$RICEUSED/launcher.rasi
+
+# sxhkd reload configuration file
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# hide polybar
+super + a
+	hu-polybar -h
+
+# unhide polybar
+super + o 
+	hu-polybar -u
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close task
+super + apostrophe
+	bspc node -c
+
+# kill task
+super + comma
+	bspc node -k
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Media Keys
+
+# turn up the volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume 1 +2%
+
+# turn down the volume
+XF86AudioLowerVolume
+	pactl set-sink-volume 1 -2%
+
+# mute volume
+XF86AudioMute
+	pactl set-sink-mute 1 toggle
+
+# pause/play audio
+XF86AudioPlay
+	playerctl play-pause
+
+# next audio
+XF86AudioNext
+	playerctl next
+
+# previous audio
+XF86AudioPrev
+	playerctl previous
