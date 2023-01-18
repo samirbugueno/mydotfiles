@@ -8,6 +8,7 @@ PATH="$HOME/.config/bspwm/scripts:$PATH"
 
 # Workspaces
 bspc monitor DP-0 -d '1' '2' '3' '4' '5' '6' '7'
+bspc monitor HDMI-0 -d '8' '9'
 
 # My Resolution
 xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --output HDMI-0 --mode 1600x900 --rate 60 --pos 1920x180 &
