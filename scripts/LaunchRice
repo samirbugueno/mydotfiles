@@ -63,7 +63,6 @@ function SetMyRice() {
 
 function StartApps() {
 	launch sxhkd -c ${bspwmdir}/sxhkdrc &
-	launch picom --config ${bspwmdir}/rices/$RICEUSED/picom.conf &
 	launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 	nitrogen --restore &
 	xsetroot -cursor_name left_ptr
