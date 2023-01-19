@@ -1,0 +1,115 @@
+
+/* saMirky Config */
+
+configuration {
+	modi:					"run,drun,window";
+	terminal:				"alacritty";
+	drun-display-format:	"{name}";
+	location:				0;
+	hide-scrollbar:			true;
+	display-drun:			" Apps";
+	display-run:			" Run";
+	display-window:			" Window";
+	display-Network:		"Network";
+	sidebar-mode:			true;
+}
+
+/* Fonts & Colors*/
+* {
+	font:					"Hack Nerd Font 11";
+	background:				#000000;
+	foreground:				#ff0000;
+}
+
+element-text, mode-switcher {
+	background-color:		inherit;
+	text-color:				inherit;
+}
+
+window {
+	height:					1020px;
+	width:					350px;
+	border:					2px;
+	location:				northwest;
+	x-offset:				8px;
+	y-offset:				52px;
+	border-color:			@foreground;
+	background-color:		@background;
+}
+
+mainbox {
+	background-color:		@background;
+}
+
+inputbar {
+	background-color:		@background;
+	padding:				2px;
+	children:				[ prompt, entry ];
+}
+
+prompt {
+	background-color:		@background;
+	text-color:				@foreground;
+	padding:				0px;
+	margin:					6px 11px 5px 8px;
+}
+
+textbox-prompt-colon {
+	expand: 				false;
+	str:					":";
+}
+
+entry {
+	background-color:		@background;
+	text-color:				@foreground;
+	padding:				6px;
+	margin:					0px 0px 0px 0px;
+}
+
+listview {
+	background-color:		@background;
+	border:					0px 0px 0px;
+	padding:				0px 0px 0px;
+	margin:					0px 6px 0px 6px;
+	columns:				1;
+	lines:					5;
+}
+
+element {
+	background-color:		@background;
+	text-color:				@foreground;
+	padding:				1px;
+}
+
+element selected {
+	background-color:		@foreground;
+	text-color:				@background;
+}
+
+mode-switcher {
+	spacing:				0;
+}
+
+button {
+	background-color:		@background;
+	text-color:				@foreground;
+	padding:				10px;
+	vertical-align:			0.5;
+	horizontal-align:		0.5;
+}
+
+button selected {
+	border:					2px;
+	border-color:			@foreground;
+	background-color:		@background;
+	text-color:				@foreground;
+}
+
+message {
+	background-color:		@background;
+}
+
+textbox {
+	background-color:		@background;
+	text-color:				@foreground;
+}
