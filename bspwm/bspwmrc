@@ -16,7 +16,6 @@ xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --output HDMI-0 --mod
 # Launch
 source LaunchRice
 SetMyRice
-StartApps
 
 # Bspwm 
 bspc config border_width                    2

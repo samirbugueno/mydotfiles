@@ -21,50 +21,82 @@ function SetMyRice() {
 		fuchsia)
 			SetBswpmColor "#ff0080" "#ff0080" "#ff0080"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 		
 		red)
 			SetBswpmColor "#ff0000" "#ff0000" "#ff0000"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		blue)
 			SetBswpmColor "#0000ff" "#0000ff" "#0000ff"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		white)
 			SetBswpmColor "#ffffff" "#ffffff" "#ffffff"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		green)
 			SetBswpmColor "#00ff00" "#00ff00" "#00ff00"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		yellow)
 			SetBswpmColor "#ffff00" "#ffff00" "#ffff00"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		cian)
 			SetBswpmColor "#00ffff" "#00ffff" "#00ffff"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 		purple)
 			SetBswpmColor "#ff00ff" "#ff00ff" "#ff00ff"
 			launch polybar -q main -c ${polybardir}/config.ini &
+			launch sxhkd -c ${bspwmdir}/sxhkdrc &
+			launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+			dunst -conf $bspwmdir/rices/$RICEUSED/dunst/dunstrc &
+			nitrogen --restore &
+			xsetroot -cursor_name left_ptr
 			;;
 
 	esac
-}
-
-function StartApps() {
-	launch sxhkd -c ${bspwmdir}/sxhkdrc &
-	launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-	nitrogen --restore &
-	xsetroot -cursor_name left_ptr
-	dunst &
 }
