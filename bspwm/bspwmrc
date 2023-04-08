@@ -2,36 +2,55 @@
 
 # saMirky Config
 
-# Variables
-export RICEUSED=$(<$HOME/.config/bspwm/rice.cfg)
+# Important Variables
 PATH="$HOME/.config/bspwm/scripts:$PATH"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Functions
+function launch() {
+  local running="$(pgrep -x "$1")"
+  [ "$running" ] && pkill -x "$1" 2> /dev/null
+  "$@" &
+}
+
+# My Resolution
+xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --output HDMI-0 --mode 1600x900 --rate 60 --pos 1920x180 &
 
 # Workspaces
 bspc monitor DP-0 -d '1' '2' '3' '4' '5' '6' '7'
 bspc monitor HDMI-0 -d '8' '9'
 
-# My Resolution
-xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --output HDMI-0 --mode 1600x900 --rate 60 --pos 1920x180 &
-
-# Launch
-source LaunchRice
-SetMyRice
-
-# Bspwm 
+# Bspwm Config
+bspc config normal_border_color		        "#ff0080"
+bspc config active_border_color		        "#ff0080"
+bspc config focused_border_color	        "#ff0080"
 bspc config border_width                    2
 bspc config window_gap                      8
 bspc config single_monocle                  true
 bspc config split_ratio                     0.5
-bspc config borderless_monocle   	    false
-bspc config gapless_monocle      	    false
-bspc config focus_follows_pointer	    true
-bspc config center_pseudo_tilted	    true
-bspc config pointer_modifier		    mod4
+bspc config borderless_monocle   	        false
+bspc config gapless_monocle      	        false
+bspc config focus_follows_pointer           true
+bspc config center_pseudo_tilted	        true
+bspc config pointer_modifier		        mod4
 bspc config pointer_action1                 move
 bspc config pointer_action2                 resize_side
 bspc config pointer_action3                 resize_corner
 bspc config automatic_sheme                 longest_side
-bspc config initial_polarity		    second_child
+bspc config initial_polarity		        second_child
 bspc config remove_disabled_monitors	    true
 bspc config merge_overlapping_monitors	    true
 bspc config pointer_motion_interval         16
+
+# Rules
+bspc rule -a Spotify desktop=^9
+
+# Autostart Apps
+setxkbmap dvorak
+launch sxhkd -c $HOME/.config/bspwm/sxhkdrc
+launch polybar -q main -c $HOME/.config/bspwm/polybar.ini
+launch dunst -config $HOME/.config/bspwm/dunstrc
+xsetroot -cursor_name left_ptr
+if ! pidof polkit-gnome-authentication-agent-1 > /dev/null; then
+  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+fi
