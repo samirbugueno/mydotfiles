@@ -1,6 +1,3 @@
-
-/* saMirky Config */
-
 configuration {
 	modi:					"run,drun,window";
 	terminal:				"alacritty";
@@ -18,7 +15,7 @@ configuration {
 * {
 	font:					"Hack Nerd Font 11";
 	background:				#000000;
-	foreground:				#ff0000;
+	foreground:				#ff0080;
 }
 
 element-text, mode-switcher {

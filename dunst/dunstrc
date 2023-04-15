@@ -1,28 +1,31 @@
-
 [global]
+    title = Dunst
+    class = Dunst
     monitor = 0
-    follow = none
+    follow = monitor
     width = 300
     height = 300
     origin = top-right
     offset = 8x52
+    indicate_hidden = yes
+    shrink = yes
+
+    transparency = 0
+    separator_height = 2
+    padding = 8
+
     scale = 0
     notification_limit = 0
-
     progress_bar = true
     progress_bar_height = 10
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 300
-    indicate_hidden = yes
-    transparency = 0
-    separator_height = 2
-    padding = 8
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
 
-    frame_color = "#ff00ff"
+    frame_color = "#ff0080"
 
     gap_size = 0
     separator_color = frame
@@ -54,8 +57,6 @@
     browser = /usr/bin/xdg-open
 
     always_run_script = true
-    title = Dunst
-    class = Dunst
 
     corner_radius = 0
 
@@ -71,16 +72,16 @@
 
 [urgency_low]
     background = "#000000"
-    foreground = "#ff00ff"
+    foreground = "#ff0080"
     timeout = 5
 
 [urgency_normal]
     background = "#000000"
-    foreground = "#ff00ff"
+    foreground = "#ff0080"
     timeout = 5
 
 [urgency_critical]
     background = "#000000"
-    foreground = "#ff00ff"
-    frame_color = "#ff00ff"
+    foreground = "#ff0080"
+    frame_color = "#ff0080"
     timeout = 0

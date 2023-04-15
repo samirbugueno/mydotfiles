@@ -1,0 +1,75 @@
+
+* {
+    font:                   "Hack Nerd Font 10";
+	background:             #000000;
+	foreground:             #ff0080;
+}
+
+window {
+    location:                    northeast;
+    width:                       200px;
+    fixde-height:		 true;
+    x-offset:                    -8px;
+    y-offset:                    52px;
+    border:                      2px;
+    border-color:                @foreground;
+    background-color:            @background;
+}
+
+mainbox {
+    spacing:                     8px;
+    padding:                     8px;
+    background-color:            transparent;
+    children:                    [ "message", "listview" ];
+}
+
+message {
+    margin:                      0px;
+    padding:                     8px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           @foreground;
+    blink:                       true;
+    markup:                      true;
+}
+
+listview {
+    columns:                     2;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element {
+    border:                      2px;
+    border-color:                @foreground;
+    padding:                     25px 0px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            @foreground;
+    text-color:                  @background;
+}

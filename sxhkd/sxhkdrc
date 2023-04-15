@@ -7,7 +7,7 @@ super + Return
 
 # Program Launcher
 super + @space
-	rofi -no-lazy-grab -show drun -theme $HOME/.config/bspwm/rices/$RICEUSED/launcher.rasi
+	rofi -no-lazy-grab -show drun -theme $HOME/.config/bspwm/launcher.rasi
 
 # sxhkd reload configuration file
 super + Escape
@@ -15,11 +15,11 @@ super + Escape
 
 # hide polybar
 super + a
-	hu-polybar -h
+	polybar-msg cmd hide | bspc config top_padding 0
 
 # unhide polybar
 super + o 
-	hu-polybar -u
+	polybar-msg cmd show
 
 # quit/restart bspwm
 super + alt + {q,r}
