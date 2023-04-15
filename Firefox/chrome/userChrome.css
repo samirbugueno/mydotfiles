@@ -1,0 +1,193 @@
+/* URL bar */
+#urlbar-container {
+	--urlbar-container-height: 44px !important;
+}
+
+#urlbar {
+	--urlbar-height: 36px !important;
+	--urlbar-toolbar-height: 44px !important;
+}
+
+#star-button {
+    display: none !important;
+}
+
+#urlbar-container {
+	min-width: 20vw !important;
+	max-width: 20vw !important;
+}
+
+#back-button,
+#forward-button,
+#tracking-protection-icon-container,
+#identity-box,
+#page-action-buttons,
+#firefox-view-button,
+#alltabs-button {
+	display: none !important;
+}
+
+.urlbar-input-box {
+	padding-left: 5px;
+}
+
+#urlbar, #searchbar {
+  color: #FF0080 !important;
+}
+#urlbar {
+	background: #000 !important;
+	border: 2px solid #FF0080 !important;
+	box-shadow: none !important;
+}
+
+#urlbar-background {
+	background-color: #000 !important;
+	border: none !important;
+	--toolbarbutton-border-radius: 0px !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-background {
+	background-color: #000 !important;
+	border-radius: 0px !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+	top: 0px !important;
+	left: -5px !important;
+	width: 385px !important;
+	height: 45px !important;
+}
+
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
+	outline-color: #000 !important;
+}
+
+/* Nav bar */
+#nav-bar {
+	background: #000 !important;
+  border-bottom: 2px solid #FF0080 !important;
+	margin-top: -44px !important;
+}
+
+.urlbarView-result-menu, .urlbarView-body-outer, .search-one-offs {
+	display: none !important;
+}
+
+#nav-bar-overflow-button {
+	padding: 0 !important;
+	z-index: 9;
+}
+
+/* Title bar */
+.titlebar-buttonbox,
+.titlebar-spacer {
+	display: none !important;
+}
+
+/* Tab bar */
+#navigator-toolbox {
+	border: 0px !important;
+}
+
+#tabbrowser-tabs {
+	border-inline-start: none !important;
+}
+
+#TabsToolbar {
+	margin-left: calc(20vw + 5px) !important;
+	margin-right: calc(39px + 39px) !important;
+	z-index: 2;
+	position: relative;
+}
+
+tab {
+	color: #000 !important;
+}
+
+.tab-background {
+	border: 2px solid #ff0080 !important;
+	--tab-border-radius: 0px !important;
+}
+
+.tabbrowser-tab:not([visuallyselected="true"], [multiselected]), .tabbrowser-tab:-moz-lwtheme {
+	color: #ff0080 !important;
+}
+
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {
+	background-color: transparent !important;
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
+	background-color: #ff0080 !important;
+}
+
+.close-icon:hover {
+	background-color: transparent !important;
+}
+
+/* Icons */
+.toolbarbutton-animatable-box, .toolbarbutton-1 {
+	fill: #ff0080 !important;
+}
+
+toolbarbutton {
+	color: #ff0080 !important;
+}
+
+toolbarbutton[disabled="true"] {
+	fill-opacity: 1 !important;
+}
+
+spacer:nth-child(6) {
+	border-left: 2px solid #ff0080 !important;
+	border-bottom: none !important;
+}
+
+spacer:nth-child(4) {
+	border-left: 2px solid #ff0080 !important;
+	border-bottom: none !important;
+}
+
+:root {
+	--button-hover-bgcolor: transparent !important;
+	--button-active-bgcolor: transparent !important;
+}
+
+/* Content Menu */
+#context-navigation,
+#context-sep-navigation {
+	display: none !important;
+}
+
+.menupopup-arrowscrollbox {
+	color: #ff0080 !important;
+	background: #000 !important;
+	border: 2px solid #ff0080 !important;
+}
+
+menu, menuitem, menucaption {
+	appearance: none !important;
+}
+
+menu:where([_moz-menuactive="true"]), menuitem:where([_moz-menuactive="true"]) {
+	background-color: #ff0080 !important;
+	color: #000 !important;
+}
+
+/* Menus */
+:root {
+	--arrowpanel-background: #000 !important;
+	--arrowpanel-color: #ff0080 !important;
+	--arrowpanel-border-color: #ff0080 !important;
+	--arrowpanel-border-radius: 0px !important;
+}
+
+:root:not(:-moz-lwtheme) {
+	--panel-separator-zap-gradient: #ff0080 !important;
+}
+
+/* Text selection color */
+::selection {
+	color: #000 !important;
+	background-color: #ff0080 !important;
+}
